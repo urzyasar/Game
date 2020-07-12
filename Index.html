@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="utf-8" content="width=device-width intial-scale=1.0">
+	  <meta name="description" content="Simple Javascript Game">
+	  <meta name="keywords" content="Javascript Game">
+	  <meta name="author" content="Yasar Arafath">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	  <link rel="stylesheet" href="style.css">
+	  <title>Game in JavaScript</title>
+</head>
+<body>
+	<section>
+		<audio id="audio" src="sound.wav" autostart="false"></audio>
+	</section>
+
+<script type="text/Javascript">
+document.addEventListener("click",function(e)
+{
+	let body=document.querySelector('body');
+	let bullet=document.createElement('span');
+	let x=e.offsetX;
+	let y=e.offsetY;
+	bullet.style.left=x+'px';
+	bullet.style.top=y+'px';
+	body.appendChild(bullet);
+
+	let audio=document.getElementById('audio');
+	audio.play();
+})
+</script>
+</body>
+</html>
